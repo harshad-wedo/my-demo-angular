@@ -1,0 +1,11 @@
+<h1>My Servers</h1>
+<button
+  class="btn btn-primary"
+  [disabled]="!allowNewServer"
+  (click)="createServer()"
+>
+  Add Server
+</button>
+@for (item of servers; track $index) {
+<app-server></app-server>
+}

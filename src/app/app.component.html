@@ -1,0 +1,50 @@
+<!-- <div class="container">
+  <app-cockpit
+    (serverCreated)="onAddServer($event)"
+    (blueprintCreated)="onAddBluePrint($event)"
+  ></app-cockpit>
+  <button type="button" (click)="onChangeDetect()">Change</button>
+  <button type="button" (click)="onDestroyComponent()">Destroy</button>
+  <hr />
+  <div class="row">
+    <div class="col-md-12"> -->
+<!-- <app-servers></app-servers> -->
+<!-- @for (serverElement of serverElements; track $index) {
+      <app-server-element [element]="serverElement"></app-server-element>
+      }
+    </div>
+  </div>
+</div> -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <button class="btn btn-primary" (click)="onOnlyOddToggle()">
+        Only show add number
+      </button>
+    </div>
+  </div>
+  <hr />
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="list-group">
+        @for (odd of oddNumbers; track $index) {
+        <li class="list-group-item" *appUnless="onlyOddNumber">{{ odd }}</li>
+        }
+        <!-- even number -->
+        @for (even of evenNumbers; track $index) {
+        <li class="list-group-item" *appUnless="!onlyOddNumber">
+          {{ even }}
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-ms-12">
+      <p appBasicDirective defaultColor="red" selectedColor="yellow">
+        This is base directive
+      </p>
+    </div>
+  </div>
+</div>
